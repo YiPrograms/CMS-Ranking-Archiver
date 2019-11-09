@@ -26,6 +26,7 @@ parser.add_argument("--nosublist", help="Don't crawl detailed submission info", 
 args = parser.parse_args()
 
 url = args.url
+url = 'http://' + url if url.find('http') < 0 else url
 if url.endswith("/"):
     url = url[:-1]
 if "Ranking.html" in url:
