@@ -35,3 +35,9 @@ optional arguments:
 #### Optional
 
 `output` : Path to output static files. Will be the first contest name if not specified.
+
+## License
+
+`cmsranking` is modified from [cms-dev](https://github.com/cms-dev/cms/tree/master/cmsranking/static)
+
+Release under AGPL v3
