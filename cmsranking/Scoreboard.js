@@ -238,8 +238,12 @@ var Scoreboard = new function () {
     <td colspan=\"10\" class=\"f_name\">" + escapeHTML(user["f_name"]) + "</td> \
     <td colspan=\"10\" class=\"l_name\">" + escapeHTML(user["l_name"]) + "</td>";
 
-        if (user['team'] && !(DataStore.asset_config && DataStore.asset_config["noflags"])) {
-            result += " \
+        if (user['team']) {
+            if (DataStore.asset_config && DataStore.asset_config["noflags"])
+                result += " \
+            <td class=\"team\">" + user["team"] + "</td>";
+            else
+                result += " \
     <td class=\"team\"><img src=\"" + Config.get_flag_url(user["team"]) + "\" title=\"" + DataStore.teams[user["team"]]["name"] + "\" /></td>";
         } else {
             result += " \

@@ -123,7 +123,9 @@ for i in range(len(sub_names)):
             print("Failed to receive %s/%s!" % (sub_names[i], sub_items[i][j]))
 
 
-asset_config = "{'nofaces': " + str(args.nofaces) + ", 'noflags': " + str(args.noflags) + ", 'nosublist': " + str(args.nosublist) + "}"
+asset_config = "{\"nofaces\": " + str(args.nofaces).lower() + \
+               ",\"noflags\": " + str(args.noflags).lower() + \
+               ",\"nosublist\": " + str(args.nosublist).lower() + "}"
 open(output + "/asset_config", "w").write(asset_config)
 
 
